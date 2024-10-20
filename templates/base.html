@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Тестовый проект Джанго</title>
+    <p>Дата (день/месяц/год) - {% now 'j/m/Y' %}</p>
+    <p>Время (час:мин:сек) - {% now 'H:i:s' %}</p>
+
+</head>
+<body>
+<nav>
+    <div><a href="/">Главная</a> | <a href="/about">О нас</a> | <a href="/posts">Сообщения пользователей</a> | <a href="/write_post">Написать пост</a></div>
+     <div><img src="{% static 'images/cat_prog.jpg' %}" width="300px"></div>
+</nav>
+<h1>{% block title_h1 %}{% endblock title_h1 %}</h1>
+<div>{% block content %}{% endblock content %}</div>
+<div>{% block data %}{% endblock data %}</div>
+
+<footer>
+    <div>MyCorp. 2023. All rights reserved.</div>
+</footer>
+</body>
+</html>

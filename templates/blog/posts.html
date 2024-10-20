@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block title %}Posts{% endblock title %}
+{% block title_h1 %}Сообщения пользователей{% endblock title_h1 %}
+{% block data %}
+<ul>
+  {% for post in posts %}
+  <li><h3>{{ post.author }} сказал следующее:</h3> {{ post }} <br><br>  <a href="delete/{{ post.id }}">Удалить это душный пост</a></li>
+    {% endfor %}
+</ul>
+{% endblock data %}
